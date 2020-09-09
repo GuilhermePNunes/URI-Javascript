@@ -1,0 +1,16 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+/**
+ * Escreva a sua solução aqui
+ * Code your solution here
+ * Escriba su solución aquí
+ */
+ 
+var primeiro = lines.shift().split(' ');
+var segundo = lines.shift().split(' ');
+
+var item1 = parseInt(primeiro[0]); var qnt1 = parseInt(primeiro[1]); var value1 = parseFloat(primeiro[2]);
+var item2 = parseInt(segundo[0]); var qnt2 = parseInt(segundo[1]); var value2 = parseFloat(segundo[2]);
+
+console.log("VALOR A PAGAR: R$ " + parseFloat((qnt1*value1)+(qnt2*value2)).toFixed(2));
